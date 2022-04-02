@@ -23,6 +23,7 @@ ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 
 COPY --from=node /quetz_frontend/dist /quetz-frontend
 COPY --from=conda /env /env
+COPY ./dev_data /quetz-deployment
 
 # Set WORKDIR to /tmp because quetz always creates a quetz.log file
 # in the current directory
@@ -32,4 +33,4 @@ EXPOSE 8000
 
 # The following command assumes that a deployment has been initialized
 # in the /quetz-deployment volume
-CMD ["quetz", "start", "/quetz-deployment", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["quetz", "run", "/quetz-deployment", "--host", "0.0.0.0", "--port", "8000", "--dev"]
