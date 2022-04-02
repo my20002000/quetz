@@ -1,0 +1,15 @@
+[github]
+# Register the app here: https://github.com/settings/applications/new
+client_id = ""
+client_secret = ""
+
+[sqlalchemy]
+database_url = "sqlite:///./quetz.sqlite"
+
+[session]
+secret = "77938ff8baf3bc7e4ef57f15bfdc876a575afb8b73f7ade90ba9d9d78cd2261b"
+https_only = true
+
+[users]
+admins = ["dummy:alice"]
+
