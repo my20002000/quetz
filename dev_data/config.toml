@@ -7,9 +7,5 @@ client_secret = ""
 database_url = "sqlite:///./quetz.sqlite"
 
 [session]
-secret = "77938ff8baf3bc7e4ef57f15bfdc876a575afb8b73f7ade90ba9d9d78cd2261b"
-https_only = true
-
-[users]
-admins = ["dummy:alice"]
-
+secret = "ef689d49f2624347bd2c36d48bccd86004ef66593bf7c73605a64cc8d284c0e9"
+https_only = false
