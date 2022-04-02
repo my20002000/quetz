@@ -23,6 +23,7 @@ ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 
 COPY --from=node /quetz_frontend/dist /quetz-frontend
 COPY --from=conda /env /env
+VOLUME ["/quetz-deployment"] 
 COPY ./dev_data /quetz-deployment
 
 # Set WORKDIR to /tmp because quetz always creates a quetz.log file
